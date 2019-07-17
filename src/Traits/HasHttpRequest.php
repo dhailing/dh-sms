@@ -3,7 +3,7 @@
 /*
  * (c) overtrue <i@overtrue.me>
  *
- * Modified By yansongda <me@206989662@qq.com>
+ * Modified By Ninenight <me@206989662@qq.com>
  *
  * This source file is subject to the MIT license that is bundled
  * with this source code in the file LICENSE.

@@ -71,7 +71,16 @@ abstract class Xuanwu implements GatewayInterface
         $client = new \SoapClient($this->gateway);
 
         $ret = $client->PostSingle($this->config);
-        $result = $ret->PostSingleResult;
+        $redata = $ret->PostSingleResult;
+
+        $result = [];
+        if($redata == 0) {
+            $result['msg'] = 'success';
+            $result['code'] = 200;
+        } else {
+            $result['msg'] = $redata['Message'];
+            $result['code'] = 500;
+        }
 
         return $result;
     }

@@ -99,7 +99,16 @@ abstract class Juzhixin implements GatewayInterface
 
         //xml转换
         $xml = simplexml_load_string($data);
-        $result = json_decode(json_encode($xml),true);
+        $redata = json_decode(json_encode($xml),true);
+
+        $result = [];
+        if($redata['returnstatus'] == 'Success') {
+            $result['msg'] = 'success';
+            $result['code'] = 200;
+        } else {
+            $result['msg'] = $redata['message'];
+            $result['code'] = 500;
+        }
 
         return $result;
     }

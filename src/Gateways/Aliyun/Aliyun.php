@@ -120,12 +120,23 @@ abstract class Aliyun implements GatewayInterface
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
             curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
         }
-        $result = curl_exec($ch);
-        if ($result === false) {
+        $redata = curl_exec($ch);
+        if ($redata === false) {
            throw new InvalidArgumentException("[CURL_" . curl_errno($ch) . "]: " . curl_error($ch));
         }
         curl_close($ch);
 
-        return json_decode($result, true);
+        $redata = json_decode($redata, true);
+
+        $result = [];
+        if($redata['Code'] == 'OK') {
+            $result['msg'] = 'success';
+            $result['code'] = 200;
+        } else {
+            $result['msg'] = $redata['Message'];
+            $result['code'] = $redata['Code'];
+        }
+
+        return $result;
     }
 }

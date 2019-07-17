@@ -16,7 +16,7 @@ use ninenight\Send\Support\Config;
 class Send
 {
     /**
-    * @var \Yansongda\Pay\Support\Config
+    * @var \Ninenight\Pay\Support\Config
     */
     private $config;
 
@@ -26,7 +26,7 @@ class Send
     private $drivers;
 
     /**
-     * @var \Yansongda\Pay\Contracts\GatewayInterface
+     * @var \Ninenight\Pay\Contracts\GatewayInterface
      */
     private $gateways;
 
@@ -65,11 +65,11 @@ class Send
     /**
      * set pay's gateway.
      *
-     * @author yansongda <me@206989662@qq.com>
+     * @author Ninenight <me@206989662@qq.com>
      *
      * @param string $gateway
      *
-     * @return \Yansongda\Pay\Contracts\GatewayInterface
+     * @return \Ninenight\Pay\Contracts\GatewayInterface
      */
     public function gateway($gateway = 'web')
     {
@@ -85,11 +85,11 @@ class Send
     /**
      * create pay's gateway.
      *
-     * @author yansongda <me@206989662@qq.com>
+     * @author Ninenight <me@206989662@qq.com>
      *
      * @param string $gateway
      *
-     * @return \Yansongda\Pay\Contracts\GatewayInterface
+     * @return \Ninenight\Pay\Contracts\GatewayInterface
      */
     protected function createGateway($gateway)
     {
@@ -109,7 +109,7 @@ class Send
      *
      * @param string $gateway
      *
-     * @return \Yansongda\Pay\Contracts\GatewayInterface
+     * @return \Ninenight\Pay\Contracts\GatewayInterface
      */
     protected function build($gateway)
     {
