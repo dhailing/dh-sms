@@ -25,7 +25,7 @@ class Config implements ArrayAccess
     /**
      * get a config.
      *
-     * @author JasonYan <me@206989662@qq.com>
+     * @author Ninenight <me@206989662@qq.com>
      *
      * @param string $key
      * @param string $default
@@ -57,7 +57,7 @@ class Config implements ArrayAccess
     /**
      * set a config.
      *
-     * @author JasonYan <me@206989662@qq.com>
+     * @author Ninenight <me@206989662@qq.com>
      *
      * @param string $key
      * @param array  $value
@@ -91,7 +91,7 @@ class Config implements ArrayAccess
     /**
      * [offsetExists description].
      *
-     * @author JasonYan <me@206989662@qq.com>
+     * @author Ninenight <me@206989662@qq.com>
      *
      * @param string $offset
      *
@@ -105,7 +105,7 @@ class Config implements ArrayAccess
     /**
      * [offsetGet description].
      *
-     * @author JasonYan <me@206989662@qq.com>
+     * @author Ninenight <me@206989662@qq.com>
      *
      * @param string $offset
      *
@@ -119,7 +119,7 @@ class Config implements ArrayAccess
     /**
      * [offsetSet description].
      *
-     * @author JasonYan <me@206989662@qq.com>
+     * @author Ninenight <me@206989662@qq.com>
      *
      * @param string $offset
      * @param string $value
@@ -134,7 +134,7 @@ class Config implements ArrayAccess
     /**
      * [offsetUnset description].
      *
-     * @author JasonYan <me@206989662@qq.com>
+     * @author Ninenight <me@206989662@qq.com>
      *
      * @param string $offset
      *

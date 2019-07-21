@@ -14,7 +14,7 @@ class GatewayException extends Exception
     /**
      * [__construct description].
      *
-     * @author JasonYan <me@206989662@qq.com>
+     * @author Ninenight <me@206989662@qq.com>
      *
      * @param string     $message
      * @param string|int $code

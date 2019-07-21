@@ -33,7 +33,7 @@ class Send
     /**
      * construct method.
      *
-     * @author JasonYan <me@206989662@qq.com>
+     * @author Ninenight <me@206989662@qq.com>
      *
      * @param array $config
      */
@@ -45,7 +45,7 @@ class Send
     /**
      * set pay's driver.
      *
-     * @author JasonYan <me@206989662@qq.com>
+     * @author Ninenight <me@206989662@qq.com>
      *
      * @param string $driver
      *
@@ -105,7 +105,7 @@ class Send
     /**
      * build pay's gateway.
      *
-     * @author JasonYan <me@206989662@qq.com>
+     * @author Ninenight <me@206989662@qq.com>
      *
      * @param string $gateway
      *
