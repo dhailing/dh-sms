@@ -107,7 +107,14 @@ abstract class Tencent implements GatewayInterface
      *      'code' string 验证码
      *      'mobile' string 手机号
      *      'mobile_array'  array 群发时手机号数组
-     *      'extend' string 额外信息:
+     *      'extend' string 额外信息
+     *      'msg' string 短信内容,适合非模板短信
+     *      'ext' string 透明数据,如何传过去,如何传回来
+     *      'type' int 短信类型:0=普通短信,1=营销短信,默认0
+     *      'nation_code' int 手机号国际码, 默认86
+     *      'playtimes' int 播放次数,针对语音短信,默认2
+     *      'templateid' string 模板id
+     *      'params' array 模板短信内容中的参数
      * @return mixed|void
      * User: DH
      * Email: 206989662@qq.com
@@ -140,6 +147,7 @@ abstract class Tencent implements GatewayInterface
                     //指定模板短信
                     $this->data->sig = $util->calculateSigForTempl($this->config['appkey'], $code, $curTime, $config_biz['mobile']);
                     $this->data->tpl_id = $templetId;
+                    $this->data->params = $config_biz['params'];    //模板中的参数[{1},{2},{3}]
                     $this->data->sign = $this->getSign();
                 } else {
                     //普通短信
