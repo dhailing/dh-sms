@@ -106,3 +106,30 @@ public static function aliyun()
 }
 
 ```
+
+## 飞鸽传书
+
+```$xslt
+public static function feige()
+{
+    $user_config = [                    //飞鸽传书短信的配置信息
+        'feige' => [
+            'account' => '',
+            'password' => '',
+            'signId' => '',
+        ]
+    ];
+    $config_biz = [
+        'mobile' => '182********',
+        'content' => $param1 . '||' . $param2 . '||' . $param3,   //模板中的变量
+        'templateId' => '117***'        //申请的模板号/id
+    ];
+
+    $sms = new Send($user_config);
+
+    $result = $sms->driver('flyingpigeon')->gateway('action')->send($config_biz);
+
+    dd($result);
+    
+}
+```

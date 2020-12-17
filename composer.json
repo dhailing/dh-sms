@@ -8,7 +8,10 @@
         }
     ],
     "require": {
-        "php": ">=7.0"
+        "php": ">=7.0",
+      "ext-curl": "*",
+        "ext-simplexml": "*",
+      "ext-json": "*"
     },
     "license": "MIT",
     "minimum-stability": "dev",
